@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivial Trivia Game</title>
+<!--  linking to css and jQuery -->
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+<!-- linking to jQuery-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+            <nav class="navbar navbar-light bg-light card-header">
+            <span class="navbar-brand mb-0 h1"> Trivial Trivia Game</span>
+          </nav>
+    </header>
+
+ <Main>
+
+        <div id="trivia">           
+            <img style="margin-top: 20px; margin-left: 20px;"src="assets/images/movie-set.jpg" alt="Trivia" class="img-fluid">
+            <img style="float: right; margin-top: 50px; margin-right: 30px;" src="assets/images/movie-theatre.jpg" alt="Trivia" class="img-fluid">
+        </div>
+
+        <div class="uk-animation-top-medium">
+                <div class="title jumbotron">
+                    <i class="fas fa-cog fa-spin fa-3x"></i> <h1 class="center title"> Movies Trivia Game </h1>  
+                </div>                                    
+        </div>
+
+        <article class="center container">
+                            <div class="uk-animation-scale-up">
+                                    <div class="timer"> 
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                            <h3 class="center"> Time Remaining: <span id="time"></span></h3>
+                                        </div>
+                                      </div>
+                                    </div> 
+
+
+                                <!-- QUESTIONS -->
+                                    <div id="transitions">
+                                        <div id="questions" class="show-front">
+                                            <!-- QUESTIONS FORM -->
+                                            <form id="form">
+                                                    <!-- QUESTION 1 -->
+
+                                                    <div class="front">
+                                                            <div class="innerQuestion">
+                                                                <legend> <h3>Q1. Which actor appeared in American Graffiti before starring in Star Wars?</h3></legend>                                     
+                                                                  <p id="q1">
+                                                                     <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value=" Sean Connery"><i class="fas fa-globe fa-xs"></i>  Sean Connery </label>
+                                                                     <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Robert Downy Junior"><i class="fas fa-globe fa-xs"></i> Robert Downy Junior </label> 
+                                                                     <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Kevin Costner"><i class="fas fa-globe fa-xs"></i> Kevin Costner </label> 
+                                                                     <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Kevin Bacon"><i class="fas fa-globe fa-xs"></i> Kevin Bacon </label>
+                                                                     <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Harrison Ford"><i class="fas fa-globe fa-xs"></i>Harrison Ford </label>                                    
+                                                                     <br>
+                                                                  </p> 
+                                                            </div>                                                                         
+                                                    </div>
+
+                                                   
+                                                         <!-- QUESTION 2 -->
+        
+                                                    <div class="back cf panel">
+                                                            <div class="innerQuestion">
+                                                                        <h3>Q2. BB-8 is an astromech droid from what film?</h3>                                        
+                                                                        <p id="q2">
+                                                                            <label><input class="uk-radio" name="q2" type="radio" value="Blade Runner"><i class="fas fa-dollar-sign fa-xs"></i> Blade Runner </label>
+                                                                            <label><input class="uk-radio" name="q2" type="radio" value="Ghost In a Shell "><i class="fas fa-dollar-sign fa-xs"></i> Ghost In a Shell </label>
+                                                                            <label><input class="uk-radio" name="q2" type="radio" value="Star Trek"><i class="fas fa-dollar-sign fa-xs"></i> Star Trek  </label>
+                                                                            <label><input class="uk-radio" name="q2" type="radio" value="Star Wars"><i class="fas fa-dollar-sign fa-xs"></i> Star Wars </label>
+                                                                            <label><input class="uk-radio" name="q2" type="radio" value="Independence Day"><i class="fas fa-dollar-sign fa-xs"></i> Independence Day</label>                                    
+                                                                            <br>
+                                                                        </p>
+                                                            </div>
+                                                    </div>
+
+                                                   
+                                      
+        
+                                                            <!-- QUESTION 3 -->
+        
+                                                    <div class="right cf panel">
+                                                            <div class="innerQuestion">
+                                                                        <h3>Q3. In the movie "The Wizard of Oz", what did the Scarecrow want from the wizard?</h3>                                        
+                                                                        <p id="q3">
+                                                                            <label><input class="uk-radio" name="q3" type="radio" value="A Friend"> <i class="fas fa-globe fa-xs"></i> A Friend </label>
+                                                                            <label><input class="uk-radio" name="q3" type="radio" value="A Heart"><i class="fas fa-globe fa-xs"></i> A Heart </label>
+                                                                            <label><input class="uk-radio" name="q3" type="radio" value="A Brain"><i class="fas fa-globe fa-xs"></i> A Brain </label>
+                                                                            <label><input class="uk-radio" name="q3" type="radio" value="Arms"><i class="fas fa-globe fa-xs"></i> Arms </label>
+                                                                            <label><input class="uk-radio" name="q3" type="radio" value="Legs"><i class="fas fa-globe fa-xs"></i>  Legs </label>                                    
+                                                                            <br>
+                                                                        </p>
+                                                            </div>
+                                                    </div>
+
+                                                     
+        
+                                                            <!-- QUESTION 4 -->
+                                                    <div class="left cf panel">
+                                                        <div class="innerQuestion">                                            
+                                                                            <h3>Q4. Who does the voice over for Dory from "Finding Nemo" and "Finding Dory"?</h3>                                        
+                                                                            <p id="q4">
+                                                                               <label><input class="uk-radio" name="q4" type="radio" value="McCafe"><i class="fas fa-coffee fa-xs"></i> Jennifer Aniston </label>
+                                                                                <label><input class="uk-radio" name="q4" type="radio" value="Kate Winslet"><i class="fas fa-coffee fa-xs"></i> Kate Winslet</label>
+                                                                                <label><input class="uk-radio" name="q4" type="radio" value="Eva Green"><i class="fas fa-coffee fa-xs"></i> Eva Green </label>
+                                                                                <label><input class="uk-radio" name="q4" type="radio" value="Natalie Portman"><i class="fas fa-coffee fa-xs"></i> Natalie Portman </label>
+                                                                                <label><input class="uk-radio" name="q4" type="radio" value="Ellen Degeneres"><i class="fas fa-coffee fa-xs"></i> Ellen Degeneres  </label>                                    
+                                                                                <br>
+                                                                            </p>
+                                                        </div>
+                                                    </div>  
+                                                    
+                                                          
+        
+                                                             <!-- QUESTION 5 -->
+        
+                                                    <div class="top cf panel">                                                         
+                                                                <div class="innerQuestion">
+                                                                    <h3>Q5. What fictional city is the home of Batman?</h3>                                        
+                                                                    <p id="q5">
+                                                                        <label><input class="uk-radio" name="q5" type="radio" value="Dark City"><i class="fas fa-coffee fa-xs"></i> Dark City </label>
+                                                                        <label><input class="uk-radio" name="q5" type="radio" value="Night City<"><i class="fas fa-coffee fa-xs"></i> Night City</label>
+                                                                        <label><input class="uk-radio" name="q5" type="radio" value="Shadow City "><i class="fas fa-coffee fa-xs"></i> Shadow City </label>
+                                                                        <label><input class="uk-radio" name="q5" type="radio" value="Gotham City"><i class="fas fa-coffee fa-xs"></i> Gotham City  </label>
+                                                                        <label><input class="uk-radio" name="q5" type="radio" value="Metropolis"><i class="fas fa-coffee fa-xs"></i>  Metropolis </label>                                    
+                                                                        <br>
+                                                                    </p>
+                                                                </div>
+                                                    </div>
+
+                                                    
+        
+        
+                                 
+                                                    <!-- QUESTION 6 -->
+                                                     <div class="botton cf panel">
+                                                         <div class="innerQuestion">
+                                                                    <h3>Q6.What fictional planet is the superhero, "Superman", from?</h3>                                        
+                                                                        <p id="q6">
+                                                                                <label><input class="uk-radio" name="q6" type="radio" value="Krypton"><i class="fas fa-coffee fa-xs"></i> Krypton </label>
+                                                                                <label><input class="uk-radio" name="q6" type="radio" value="Daxam"><i class="fas fa-coffee fa-xs"></i> Daxam </label>
+                                                                                <label><input class="uk-radio" name="q6" type="radio" value="Rao"><i class="fas fa-coffee fa-xs"></i> Rao </label>
+                                                                                <label><input class="uk-radio" name="q6" type="radio" value="Bizzaro"><i class="fas fa-coffee fa-xs"></i> Bizzaro  </label>
+                                                                                <label><input class="uk-radio" name="q6" type="radio" value="Atlas"><i class="fas fa-coffee fa-xs"></i>  Atlas </label>                                    
+                                                                                <br>
+                                                                        </p>
+                                                         </div>      
+                                                    </div>
+
+                                                    
+                                                    
+         
+           
+                                                    <!-- QUESTION 7         -->
+                                                    <div class="front cf panel">
+                                                        <div class="innerQuestion">
+                                                                            <h3>Q7.What famous actor is known for the saying, "I'll be back"?</h3>                                        
+                                                                            <p id="q7">
+                                                                                <input class="uk-radio" name="q7" type="radio" value="Will Smith"><i class="fas fa-coffee fa-xs"></i> Will Smith </label>
+                                                                                <input class="uk-radio" name="q7" type="radio" value="Arnold Schwarzenegger"><i class="fas fa-coffee fa-xs"></i> Arnold Schwarzenegger  </label>
+                                                                                <input class="uk-radio" name="q7" type="radio" value="Christopher Ford"><i class="fas fa-coffee fa-xs"></i> Christopher Ford  </label>
+                                                                                <input class="uk-radio" name="q7" type="radio" value="Tom Hanks"><i class="fas fa-coffee fa-xs"></i> Tom Hanks </label>
+                                                                                <br>
+                                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    
+        
+                                                             <!-- QUESTION 8         -->
+                                                    <div class="back cf panel">
+                                                                    <div class="innerQuestion">
+                                                                            <h3>Q8. What school does Harry Potter attend? </h3>                                        
+                                                                            <p id="q8">
+                                                                                <input class="uk-radio" name="q8" type="radio" value="Hogwarts"><i class="fas fa-coffee fa-xs"></i> Hogwarts </label>
+                                                                                <input class="uk-radio" name="q8" type="radio" value="Phoenix"><i class="fas fa-coffee fa-xs"></i> Phoenix </label>
+                                                                                <input class="uk-radio" name="q8" type="radio" value="Goblet"><i class="fas fa-coffee fa-xs"></i> Goblet</label>
+                                                                                <input class="uk-radio" name="q8" type="radio" value="Hogwarts"><i class="fas fa-coffee fa-xs"></i> Deathly Hallows </label>
+                                                                                <br>
+                                                                            </p>  
+                                                                    </div>                  
+                                                    </div>
+
+                                                    <p class="center show-buttons">
+                                                            <input id="submit" type="submit" class="btn btn-success" value="Submit" />
+                                                    </p>
+    
+                                            </form>                                                
+
+                                        </div>  
+                                    </div>
+                            </div>
+        </article>              
+      
+    </Main>
+
+
+
+   <footer>
+            <div class="card-footer ">
+                    <p class="center"> <strong> Copyright © 2018 - Alex Monteiro </strong>  </p>
+            </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+<!--
+<body>
+<h1>Trivial Trivia Game </h1>
+<div id="answer">       </div>
+<div id="answer">       </div>
+<div id="answer">       </div>
+<div id="answer">       </div>-->
+
+
+
+
+
+
+
+
+<!-- linking to javascript-->
+ <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
